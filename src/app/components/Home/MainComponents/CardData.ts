@@ -73,8 +73,15 @@ const CardData = [
       "A maneira como sistemas são projetados e desenvolvidos pode ter um grande impacto na eficiência e na eficácia de uma organização. Buscando sempre maneiras de melhorar integração!",
     imageUrl: "bg-[url('/Team/xavier.jpeg')]",
     func: "Desenvolvedor",
-    linkedinLink:
-      "https://www.linkedin.com/in/xmaj2001/",
+    linkedinLink: "https://www.linkedin.com/in/xmaj2001/",
+  },
+  {
+    name: "Finéias Judas",
+    description:
+      "Desenvolver soluções de software é uma paixão que me move. Estou sempre em busca de novas maneiras de melhorar a eficiência e a eficácia dos nossos produtos.",
+    imageUrl: "bg-[url('/Team/fineias.jpeg')]",
+    func: "Desenvolvedor",
+    linkedinLink: "https://github.com/FineiasJudas",
   },
 ];
 

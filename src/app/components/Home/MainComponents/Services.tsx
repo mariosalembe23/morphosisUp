@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ProfileCard from "./ProfileCard";
 import CardData from "./CardData";
 import Link from "next/link";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 interface ServiceComponent {
   aplication: string;
   tittle: string;
@@ -23,15 +23,17 @@ const ServiceComponent: React.FC<ServiceComponent> = ({
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 100 }
-    }
+      transition: { type: "spring", stiffness: 100 },
+    },
   };
   return (
-    <motion.div 
-    initial="hidden" whileInView="visible"
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: false, margin: "-100px" }}
       variants={itemVariants}
-      className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl">
+      className="bg-white shadow-lg flex flex-col justify-between p-5 rounded-xl"
+    >
       <motion.header className="">
         <p className="text-[14px] mb-2 text-indigo-600 rounded-full  inline-flex font-medium">
           {aplication}
@@ -99,9 +101,9 @@ const Services = () => {
       opacity: 1,
       transition: {
         delayChildren: 0.3,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -109,17 +111,18 @@ const Services = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 100 }
-    }
+      transition: { type: "spring", stiffness: 100 },
+    },
   };
-
 
   return (
     <section id="services" className="pb-32 relative back mt-28">
       <motion.div className="absolute top-0 left-0 right-0 w-full h-80 bg-gradient bg-gradient-to-b from-white to-transparent"></motion.div>
       <motion.div className="pt-28 relative">
         <motion.header className="text-center px-5 max-w-xl w-full mx-auto ">
-          <h2 className="pot:font-semibold font-medium text-3xl pot:text-4xl">Serviços</h2>
+          <h2 className="pot:font-semibold font-medium text-3xl pot:text-4xl">
+            Serviços
+          </h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Oferecemos uma ampla gama de serviços para atender às suas
             necessidades tecnológicas.
@@ -127,10 +130,12 @@ const Services = () => {
         </motion.header>
 
         <motion.div
-          initial="hidden" whileInView="visible"
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: false, margin: "-100px" }}
           variants={containerVariants}
-          className="grid mt-16 gap-2 ret:grid-cols-2 grid-cols-1 px-5 pot:grid-cols-4 max-w-7xl w-full mx-auto">
+          className="grid mt-16 gap-2 ret:grid-cols-2 grid-cols-1 px-5 pot:grid-cols-4 max-w-7xl w-full mx-auto"
+        >
           <ServiceComponent
             aplication="Web / Mobile / Desktop"
             tittle="Protótipo de Aplicações"
@@ -160,8 +165,17 @@ const Services = () => {
         </motion.div>
       </motion.div>
 
-      <motion.section initial="hidden" whileInView="visible" variants={containerVariants} id="team" className="mt-48 px-5">
-        <motion.header variants={itemVariants} className="text-center max-w-xl w-full mx-auto ">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        variants={containerVariants}
+        id="team"
+        className="mt-48 px-5"
+      >
+        <motion.header
+          variants={itemVariants}
+          className="text-center max-w-xl w-full mx-auto "
+        >
           <h2 className="pot:font-semibold font-medium text-4xl">Team</h2>
           <h5 className="pt-2 font-[450] text-[18px] text-zinc-800">
             Nossa equipe é composta por profissionais altamente qualificados e
@@ -196,7 +210,7 @@ const Services = () => {
             </motion.div>
           ) : (
             <motion.div className="grid max-w-[68rem] mx-auto ret:grid-cols-2 grid-cols-1 pot:grid-cols-3 gap-1">
-              {CardData.slice(4, 9).map((card, index) => (
+              {CardData.slice(4, 10).map((card, index) => (
                 <ProfileCard
                   key={index}
                   name={card.name}
@@ -209,8 +223,8 @@ const Services = () => {
             </motion.div>
           )}
           {!isRestricted && (
-            <motion.div className="grid max-w-[46rem] mx-auto grid-cols-2 gap-1">
-              {CardData.slice(7, 9).map((card, index) => (
+            <motion.div className="grid max-w-[60rem] mx-auto grid-cols-3 gap-1">
+              {CardData.slice(7, 10).map((card, index) => (
                 <ProfileCard
                   key={index}
                   name={card.name}
